@@ -1,0 +1,79 @@
+:root {
+  --brown: #5b3a29;
+  --cream: #faf4ec;
+  --accent: #c8864b;
+  --text: #3a2a20;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Pretendard", "Malgun Gothic", sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.7;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #eee;
+}
+.logo { font-weight: 700; font-size: 1.2rem; color: var(--brown); text-decoration: none; }
+.nav nav a { margin-left: 16px; color: var(--text); text-decoration: none; }
+.nav nav a:hover { color: var(--accent); }
+
+.hero {
+  text-align: center;
+  padding: 120px 24px;
+  background: linear-gradient(135deg, var(--brown), #8a5a3c);
+  color: #fff;
+}
+.hero h1 { font-size: 2.6rem; margin-bottom: 16px; }
+.hero p { font-size: 1.1rem; margin-bottom: 28px; opacity: 0.9; }
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.section { max-width: 960px; margin: 0 auto; padding: 72px 24px; text-align: center; }
+.section.alt { max-width: none; background: var(--cream); }
+.section.alt p { max-width: 640px; margin: 0 auto; }
+.section h2 { font-size: 1.8rem; margin-bottom: 32px; color: var(--brown); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.card {
+  padding: 28px 20px;
+  background: var(--cream);
+  border-radius: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); }
+.card .emoji { font-size: 2.6rem; }
+.card h3 { margin: 8px 0; }
+.card p { font-size: 0.95rem; margin-bottom: 8px; }
+.card strong { color: var(--accent); }
+
+.info { list-style: none; }
+.info li { margin: 8px 0; }
+
+footer { text-align: center; padding: 28px; background: var(--brown); color: #fff; font-size: 0.9rem; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+  .nav nav a { margin-left: 10px; }
+}
